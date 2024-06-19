@@ -22,8 +22,8 @@ def preprocess_text(text: str) -> str:
     """
     Preprocesses text by converting to lowercase and removing punctuation, numbers, and special characters.
     """
-    text = text.lower()
-    text = re.sub(r'[^\w\sÀ-ỹ]', '', text)  # Include Vietnamese character range
+    text = text.lower()  # Invoke lower() method to convert text to lowercase
+    text = re.sub(r'[^\w\sÀ-ỹ]', '', text)  # Apply regex to the lowercase text
     return text
 
 def load_data_from_csv(file_path: str) -> pd.DataFrame:
